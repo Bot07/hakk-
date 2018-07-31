@@ -885,4 +885,5 @@ return client.channels.get('449238859780194305').sendMessage(embed);
   } catch (err) {}
 
 });
-client.login(ayarlar.token);
+
+client.login(process.env.BOT_TOKEN)
