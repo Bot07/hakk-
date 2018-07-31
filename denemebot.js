@@ -305,4 +305,5 @@ member.send("Hey sen yakışıklı Simit Sunucusuna hoş geldin sunucunun ve siz
 
 
 
-client.login('NDIyMDcxNzkyNDgwNTUwOTE0.Dgw1NQ._PmTM835TredqOsb8CZMtbh6RU0');
+
+client.login(process.env.BOT_TOKENN)
