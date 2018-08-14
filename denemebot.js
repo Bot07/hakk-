@@ -6,7 +6,6 @@ const rainbow = new Array(size);
 var prefix = config.prefix;
 
 
-
 for (var i=0; i<size; i++) {
   var red   = sin_to_hex(i, 0 * Math.PI * 2/3); // 0   deg
   var blue  = sin_to_hex(i, 1 * Math.PI * 2/3); // 120 deg
@@ -47,7 +46,16 @@ client.on('ready', () => {
   setInterval(changeColor, config.speed);
 });
 
+		
+client.on('guildMemberAdd', member => {
+if(member.guild.id == "403281986405531648"){
+member.send("Hey sen yakışıklı Simit Sunucusuna hoş geldin sunucunun ve sizlerin güvenliği adına kuralları okuyup kabul etmeniz istenmektedir kuralları okumak için sunucumdaki `giriş-sistemi` adlı kanalı okumalısınız kuralları kabul etmek içinse ``sınır-kapısı-kanal-başlığını-oku` adlı kanala gelip h!kabul yazmalısın \n Bu da sınırsız davet linkimiz arkadaşlarınızı davet edebilirsiniz! https://discord.gg/GCKHqjF");
+}
+else {
+client.guilds.get('478769820846915595').channels.get('478770654087479316').send('Sunucuya bir papatya geldi');
+}
 
+});
 
 		  client.on('message', message => {
   if (message.content === prefix + 'kabul') {
@@ -279,9 +287,6 @@ client.on('message', msg => {
   }
 				});
 		 
-		 client.on('guildMemberAdd', member => {
-member.send("Hey sen yakışıklı Simit Sunucusuna hoş geldin sunucunun ve sizlerin güvenliği adına kuralları okuyup kabul etmeniz istenmektedir kuralları okumak için sunucumdaki `giriş-sistemi` adlı kanalı okumalısınız kuralları kabul etmek içinse ``sınır-kapısı-kanal-başlığını-oku` adlı kanala gelip h!kabul yazmalısın \n Bu da sınırsız davet linkimiz arkadaşlarınızı davet edebilirsiniz! https://discord.gg/GCKHqjF")
-})
 
 				client.on('message', msg => {
   if (msg.content.startsWith(prefix + "nickdegis")) {
@@ -305,5 +310,4 @@ member.send("Hey sen yakışıklı Simit Sunucusuna hoş geldin sunucunun ve siz
 
 
 
-
-client.login(process.env.BOT_TOKENN)
+client.login('NDIyMDcxNzkyNDgwNTUwOTE0.Dgw1NQ._PmTM835TredqOsb8CZMtbh6RU0');
